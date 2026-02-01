@@ -11,7 +11,9 @@
 #include <random>
 #include <thread>
 #include <cstring>
-
+#ifndef M_PI
+# define M_PI		3.14159265358979323846
+#endif
 namespace AutoGUI {
 
 // 内部辅助函数
@@ -159,7 +161,7 @@ ScreenInfo getCurrentScreen() {
 void moveToOnCurrentScreen(int x, int y, double duration) {
   ScreenInfo current = getCurrentScreen();
   moveTo(current.x + x, current.y + y, duration);
-
+}
 #endif
 
 
